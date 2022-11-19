@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+// import './index.scss';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React <span className='test'>Hola</span>
         </a>
       </header>
     </div>
