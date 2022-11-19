@@ -1,0 +1,34 @@
+@use "./library.scss";
+
+.plane-info {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(40px);
+  color: #fff;
+  &-box {
+    background: linear-gradient(
+      139.76deg,
+      rgba(9, 14, 24, 0.5) 5.58%,
+      rgba(18, 18, 51, 0.5) 94.85%
+    );
+    box-shadow: inset 0px 1px 0px #FFFFFF;
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  &-header {
+    display: flex;
+    &-ids {
+        padding: 0.5rem;
+      h5 {
+        font-size: 1rem;
+        color: library.$owlcyan;
+        margin-bottom: 0;
+      }
+      p {
+        font-size: 0.8125rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
