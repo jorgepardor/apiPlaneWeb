@@ -5,6 +5,7 @@
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(40px);
   color: #fff;
+  border-radius: 8px;
   &-box {
     background: linear-gradient(
       139.76deg,
@@ -13,7 +14,6 @@
     );
     box-shadow: inset 0px 1px 0px #ffffff;
     backdrop-filter: blur(4px);
-    border-radius: 8px;
     border-radius: 8px;
     margin: 0 0.5rem 10px 0.5rem;
     &-title {
@@ -215,6 +215,58 @@
             margin-right: 0.2rem;
           }
         }
+      }
+    }
+  }
+}
+
+.plane-list {
+  width: 300px;
+  &-item {
+    display: flex;
+    align-items: center;
+    .icon {
+      margin-right: 0.8rem;
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(
+        139.76deg,
+        rgba(25, 41, 74, 0.5) 5.58%,
+        rgba(18, 18, 51, 0.5) 94.85%
+      );
+      box-shadow: inset 0px 1px 0px #ffffff;
+      backdrop-filter: blur(4px);
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .info {
+      background: linear-gradient(
+        139.76deg,
+        rgba(25, 41, 74, 0.5) 5.58%,
+        rgba(18, 18, 51, 0.5) 94.85%
+      );
+      box-shadow: inset 0px 1px 0px #ffffff;
+      backdrop-filter: blur(4px);
+      border-radius: 8px;
+      color: library.$white;
+      padding: 0.3rem 0.5rem;
+      &-title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.01em;
+        margin-bottom: 0;
+      }
+      &-element {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.01em;
+        margin-bottom: 0;
       }
     }
   }
