@@ -57,39 +57,51 @@ var enh_flight = {
 export const PlaneEnhanced = () => {
   return (
     <div className="col-12 col-md-4 px-2 px-md-0 plane-info">
-      <div className="plane-info-box">
-        <div className="plane-info-header">
-          <div className="plane-info-header-ids">
-            <h5>BY2203 / TOM1DW</h5>
-            <p>TUI</p>
-            <p>Operated by TOU Airways</p>
+      <div className="plane-info-box sticky-md-top">
+        <div className="plane-info-box-bgwrapper">
+          <div className="plane-info-box-device">
+            <div className="plane-info-box-device-desktop">
+              <button class="btn" href="">
+                <img
+                  src="https://res.cloudinary.com/jorgepardor/image/upload/v1669024111/apiplaneweb/logo/icon-close_q3oi0u.svg"
+                  alt="close aircraft info"
+                />
+              </button>
+            </div>
           </div>
-          <div className="plane-info-header-logo">
+          <div className="plane-info-header">
+            <div className="plane-info-header-ids">
+              <h5>BY2203 / TOM1DW</h5>
+              <p>TUI</p>
+              <p>Operated by TOU Airways</p>
+            </div>
+            <div className="plane-info-header-logo">
+              <img
+                src="https://res.cloudinary.com/jorgepardor/image/upload/v1668892798/apiplaneweb/logo/Frame_jq2e5z.svg"
+                alt="radarowl logo"
+              />
+            </div>
+          </div>
+          <div className="plane-info-image">
             <img
-              src="https://res.cloudinary.com/jorgepardor/image/upload/v1668892798/apiplaneweb/logo/Frame_jq2e5z.svg"
-              alt="radarowl logo"
+              src="https://cdn.jetphotos.com/400/5/98629_1653709314.jpg"
+              alt="image of ..."
             />
           </div>
-        </div>
-        <div className="plane-info-image">
-          <img
-            src="https://cdn.jetphotos.com/400/5/98629_1653709314.jpg"
-            alt="image of ..."
-          />
-        </div>
-        <div className="plane-info-route">
-          <div className="col-5 plane-info-route-item">
-            <h3 className="route-id">TFS</h3>
-            <p className="airport-name">Tenerife</p>
-            <p className="timezone">West (UTC+01:00)</p>
-          </div>
-          <div className="col-2 plane-info-route-icon">
-            <img src="https://res.cloudinary.com/jorgepardor/image/upload/v1668894413/apiplaneweb/logo/route_to_vqwant.svg" />
-          </div>
-          <div className="col-5 plane-info-route-item">
-            <h3 className="route-id">TFS</h3>
-            <p className="airport-name">Tenerife</p>
-            <p className="timezone">West (UTC+01:00)</p>
+          <div className="plane-info-route">
+            <div className="col-5 plane-info-route-item">
+              <h3 className="route-id">TFS</h3>
+              <p className="airport-name">Tenerife</p>
+              <p className="timezone">West (UTC+01:00)</p>
+            </div>
+            <div className="col-2 plane-info-route-icon">
+              <img src="https://res.cloudinary.com/jorgepardor/image/upload/v1668894413/apiplaneweb/logo/route_to_vqwant.svg" />
+            </div>
+            <div className="col-5 plane-info-route-item">
+              <h3 className="route-id">TFS</h3>
+              <p className="airport-name">Tenerife</p>
+              <p className="timezone">West (UTC+01:00)</p>
+            </div>
           </div>
         </div>
       </div>
