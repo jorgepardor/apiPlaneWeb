@@ -10,6 +10,7 @@ import {
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
+
 const defposition = [43.3, -8.378];
 const plane1 = [42.8, -8.378];
 const plane2 = [43.5, -8.378];
@@ -39,7 +40,9 @@ const rangeRadius = {
   fillColor: "rgba(255, 255, 255, 0.08)",
 };
 
-export default function Map() {
+export default function Map(props) {
+
+
   return (
     <MapContainer
       center={defposition}
@@ -74,10 +77,8 @@ export default function Map() {
         </Popup>
       </Marker>
 
-
       <Marker icon={planeIconActive} position={plane1} />
       <Marker icon={planeIconActive} position={plane2} />
-
     </MapContainer>
   );
 }

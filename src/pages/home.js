@@ -1,11 +1,30 @@
 import { PlaneEnhanced } from "../components/planeEnhanced";
 import Map from "../components/map";
-import logo from "./../logo.svg";
 import { Header } from "../components/header";
 import { PlaneList } from "../components/planeList";
 import { MainNav } from "../components/mainNav";
+import { useEffect, useState } from "react";
 
 function Home() {
+  let [currentPlanes, setCurrentPlanes] = useState();
+
+  useEffect(() => {
+    getRadarPlanes();
+  }, []);
+
+  let getRadarPlanes = async () => {
+    let response = await fetch("http://localhost/states", {
+      method: "GET",
+      mode: 'cors',
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+    console.log(response)
+    .then((response) => response.json())
+    .then((data) => setCurrentPlanes(data))
+  };
+
   return (
     <div className="main-map">
       <Map />
