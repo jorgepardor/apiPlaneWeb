@@ -61,7 +61,7 @@ export const PlaneEnhanced = () => {
         <div className="plane-info-box-bgwrapper">
           <div className="plane-info-box-device">
             <div className="plane-info-box-device-desktop">
-              <button class="btn" href="">
+              <button className="btn" href="">
                 <img
                   src="https://res.cloudinary.com/jorgepardor/image/upload/v1669024111/apiplaneweb/logo/icon-close_q3oi0u.svg"
                   alt="close aircraft info"
