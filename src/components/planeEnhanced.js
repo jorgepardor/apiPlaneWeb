@@ -1,59 +1,5 @@
 import React from "react";
 
-var bas_flight = {
-  x407176: [
-    "407176",
-    43.2041,
-    -8.0519,
-    26,
-    36000,
-    395,
-    "4456",
-    0,
-    "",
-    "",
-    1668878308,
-    "",
-    "",
-    "",
-    0,
-    0,
-    "EXS45LE",
-  ],
-};
-
-var enh_flight = {
-  icao: 407176,
-  f_number: "BY2203",
-  f_number_2: "TOM6LE",
-  airline: "TUI Airways",
-  squawk: 4527,
-  route: {
-    from: { from: "ABZ", name: "Aberdeen", time: "..." },
-    to: { from: "TFS", name: "Tenerife", time: "..." },
-  },
-  position: { lat: 43.2041, lon: -8.0519 },
-  aircraft: {
-    type: "Boeing 767-38A (ER)",
-    registration: "G-TAWN",
-    serial: 88333,
-    country: "England",
-    flag: "imagepath",
-  },
-  recent: {
-    "19/10/2022": ["BY1619", "TFS", "Tenerife", "EDI", "Edingburg"],
-    "17/10/2022": ["BY1618", "EDI", "Edingburg", "TFS", "Tenerife"],
-  },
-  data: {
-    c_altitude: 37000,
-    gps_altitude: 38788,
-    v_speed: 0,
-    track: 184,
-    groundspeed: 922,
-    mach: 1,
-  },
-};
-
 export const PlaneEnhanced = () => {
   return (
     <div className="col-12 col-md-4 px-2 px-md-0 plane-info">

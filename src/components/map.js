@@ -10,12 +10,14 @@ import {
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
-
+const mapUrl =
+  "https://api.mapbox.com/styles/v1/jorgepardor/cl41jp1fo000614o0fae6p97g/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoiam9yZ2VwYXJkb3IiLCJhIjoiY2xhcXBubnA3MWlmcDN4bjZlZGUzZTJmdiJ9.rq1aWUqm3lDnEVQ6bTrCSw";
+const atrUrl =
+  '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>';
 const defposition = [43.3, -8.378];
-const plane1 = [42.8, -8.378];
-const plane2 = [43.5, -8.378];
 const defzoom = [9];
-const myIcon = L.icon({
+const plane1 = [42.8, -8.378];
+const radarPosition = L.icon({
   iconUrl:
     "https://res.cloudinary.com/jorgepardor/image/upload/v1669039588/apiplaneweb/logo/location_mark_wfj1tz.svg",
   iconSize: [16, 20],
@@ -41,8 +43,6 @@ const rangeRadius = {
 };
 
 export default function Map(props) {
-
-
   return (
     <MapContainer
       center={defposition}
@@ -50,11 +50,8 @@ export default function Map(props) {
       scrollWheelZoom={false}
       style={{ width: "100%", height: "100%" }}
     >
-      <TileLayer
-        url="https://api.mapbox.com/styles/v1/jorgepardor/cl41jp1fo000614o0fae6p97g/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoiam9yZ2VwYXJkb3IiLCJhIjoiY2xhcXBubnA3MWlmcDN4bjZlZGUzZTJmdiJ9.rq1aWUqm3lDnEVQ6bTrCSw"
-        attribution='© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>'
-      />
-      <Marker icon={myIcon} position={defposition}>
+      <TileLayer url={mapUrl} attribution={atrUrl} />
+      <Marker icon={radarPosition} position={defposition}>
         <LayerGroup>
           <Circle
             center={defposition}
@@ -72,13 +69,9 @@ export default function Map(props) {
             radius={185200}
           />
         </LayerGroup>
-        <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
-        </Popup>
       </Marker>
 
       <Marker icon={planeIconActive} position={plane1} />
-      <Marker icon={planeIconActive} position={plane2} />
     </MapContainer>
   );
 }
