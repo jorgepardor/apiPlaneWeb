@@ -40,6 +40,7 @@ const rangeRadius = {
   fillColor: "rgba(255, 255, 255, 0.08)",
 };
 
+
 export default function Map(props) {
 
 
@@ -76,6 +77,7 @@ export default function Map(props) {
           A pretty CSS3 popup. <br /> Easily customizable.
         </Popup>
       </Marker>
+    
 
       <Marker icon={planeIconActive} position={plane1} />
       <Marker icon={planeIconActive} position={plane2} />
